@@ -57,7 +57,7 @@ Event names and corresponding tracepoint
 
 10. report_user_exit - rcu_dyntick with context = USER, oldnesting = 0 and newnesting = 1
 
-11. report_qs - rcu_quiescent_state_report
+11. report_qs - rcu_quiescent_state_report with rcuname == rcu_preempt
 
 12. softirq_entry - softirq_entry
 
@@ -65,4 +65,6 @@ Event names and corresponding tracepoint
 
 Cases not handled:
 
-IRQ in kernel mode is not handled here i.e., rcu_dyntick with context = IRQ and oldensting = 0 and newnesting = 2
+1. IRQ in kernel mode is not handled here i.e., rcu_dyntick with context = IRQ and oldensting = 0 and newnesting = 
+
+2. Deferred QS report in rcu_preempt_deferred_qs_irqrestore().

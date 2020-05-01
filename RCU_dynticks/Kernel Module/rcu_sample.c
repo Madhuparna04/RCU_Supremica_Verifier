@@ -49,7 +49,8 @@ void handle_rcu_quiescent_state_report(void *data, const char *rcuname, unsigned
 		 unsigned long mask, unsigned long qsmask,
 		 u8 level, int grplo, int grphi, int gp_tasks)
 {
-	__handle_event(report_qs);
+	if(strcmp(rcuname,"rcu_preempt")==0)
+		__handle_event(report_qs);
 
 }
 void handle_rcu_dyntick(void *data, const char *polarity, const char *context, long oldnesting,
