@@ -65,6 +65,6 @@ Event names and corresponding tracepoint
 
 Cases not handled:
 
-1. IRQ in kernel mode is not handled here i.e., rcu_dyntick with context = IRQ and oldensting = 0 and newnesting = 
+1. IRQ in kernel mode is not handled here i.e., rcu_dyntick with context = IRQ and oldensting = 0 and newnesting = 2
 
 2. Deferred QS report in rcu_preempt_deferred_qs_irqrestore().

@@ -14,6 +14,7 @@
 <EventDecl Kind="CONTROLLABLE" Name="report_user_exit"/>
 <EventDecl Kind="CONTROLLABLE" Name="softirq_entry"/>
 <EventDecl Kind="CONTROLLABLE" Name="softirq_exit"/>
+<EventDecl Kind="PROPOSITION" Name=":accepting"/>
 </EventDeclList>
 <ComponentList>
 <SimpleComponent Kind="PLANT" Name="rcu">
@@ -29,7 +30,7 @@
 </SimpleNode>
 <SimpleNode Name="S1">
 <PointGeometry>
-<Point X="368" Y="816"/>
+<Point X="272" Y="816"/>
 </PointGeometry>
 <LabelGeometry Anchor="NW">
 <Point X="0" Y="10"/>
@@ -85,7 +86,7 @@
 </SimpleNode>
 <SimpleNode Name="S8">
 <PointGeometry>
-<Point X="432" Y="960"/>
+<Point X="256" Y="880"/>
 </PointGeometry>
 <LabelGeometry Anchor="NW">
 <Point X="0" Y="10"/>
@@ -203,13 +204,77 @@
 <Point X="0" Y="10"/>
 </LabelGeometry>
 </SimpleNode>
+<SimpleNode Name="S23">
+<PointGeometry>
+<Point X="688" Y="800"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S24">
+<PointGeometry>
+<Point X="672" Y="880"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S25">
+<PointGeometry>
+<Point X="640" Y="464"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S26">
+<PointGeometry>
+<Point X="592" Y="432"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S27">
+<PointGeometry>
+<Point X="560" Y="832"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S28">
+<PointGeometry>
+<Point X="560" Y="944"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S29">
+<PointGeometry>
+<Point X="496" Y="832"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
+<SimpleNode Name="S30">
+<PointGeometry>
+<Point X="448" Y="864"/>
+</PointGeometry>
+<LabelGeometry Anchor="NW">
+<Point X="0" Y="10"/>
+</LabelGeometry>
+</SimpleNode>
 </NodeList>
 <EdgeList>
 <Edge Source="S19" Target="S20">
 <LabelBlock>
 <SimpleIdentifier Name="nesting_enter_1"/>
 <LabelGeometry Anchor="NW">
-<Point X="0" Y="10"/>
+<Point X="-45" Y="12"/>
 </LabelGeometry>
 </LabelBlock>
 <StartPointGeometry>
@@ -294,7 +359,7 @@
 <LabelBlock>
 <SimpleIdentifier Name="report_idle_enter"/>
 <LabelGeometry Anchor="NW">
-<Point X="0" Y="10"/>
+<Point X="-50" Y="18"/>
 </LabelGeometry>
 </LabelBlock>
 <StartPointGeometry>
@@ -328,7 +393,7 @@
 <LabelBlock>
 <SimpleIdentifier Name="nesting_enter_2"/>
 <LabelGeometry Anchor="NW">
-<Point X="11" Y="-8"/>
+<Point X="-122" Y="-3"/>
 </LabelGeometry>
 </LabelBlock>
 <StartPointGeometry>
@@ -345,7 +410,7 @@
 <LabelBlock>
 <SimpleIdentifier Name="nesting_exit_2"/>
 <LabelGeometry Anchor="NW">
-<Point X="-125" Y="-32"/>
+<Point X="21" Y="-34"/>
 </LabelGeometry>
 </LabelBlock>
 <StartPointGeometry>
@@ -484,7 +549,7 @@
 <Point X="288" Y="656"/>
 </StartPointGeometry>
 <SplineGeometry>
-<Point X="342" Y="729"/>
+<Point X="294" Y="737"/>
 </SplineGeometry>
 </Edge>
 <Edge Source="S1" Target="S21">
@@ -495,7 +560,7 @@
 </LabelGeometry>
 </LabelBlock>
 <SplineGeometry>
-<Point X="314" Y="743"/>
+<Point X="266" Y="735"/>
 </SplineGeometry>
 <EndPointGeometry>
 <Point X="288" Y="656"/>
@@ -689,11 +754,11 @@
 <LabelBlock>
 <SimpleIdentifier Name="nesting_enter_3"/>
 <LabelGeometry Anchor="NW">
-<Point X="-6" Y="-41"/>
+<Point X="14" Y="-7"/>
 </LabelGeometry>
 </LabelBlock>
 <SplineGeometry>
-<Point X="425" Y="877"/>
+<Point X="275" Y="851"/>
 </SplineGeometry>
 </Edge>
 <Edge Source="S8" Target="S1">
@@ -704,7 +769,7 @@
 </LabelGeometry>
 </LabelBlock>
 <SplineGeometry>
-<Point X="375" Y="899"/>
+<Point X="253" Y="845"/>
 </SplineGeometry>
 </Edge>
 <Edge Source="S5" Target="S9">
@@ -839,6 +904,192 @@
 </LabelBlock>
 <SplineGeometry>
 <Point X="829" Y="565"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S18" Target="S23">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_enter_2"/>
+<LabelGeometry Anchor="NW">
+<Point X="-5" Y="17"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="733" Y="761"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S23" Target="S18">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_exit_2"/>
+<LabelGeometry Anchor="NW">
+<Point X="-86" Y="-14"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="707" Y="743"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S23" Target="S24">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_enter_3"/>
+</LabelBlock>
+<SplineGeometry>
+<Point X="696" Y="843"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S24" Target="S23">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_exit_3"/>
+<LabelGeometry Anchor="NW">
+<Point X="-52" Y="1"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="664" Y="837"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S17" Target="S25">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_enter_3"/>
+<LabelGeometry Anchor="NW">
+<Point X="-119" Y="-25"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="679" Y="509"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S25" Target="S17">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_exit_3"/>
+<LabelGeometry Anchor="NW">
+<Point X="-35" Y="-28"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="697" Y="483"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S25" Target="S26">
+<LabelBlock>
+<SimpleIdentifier Name="softirq_entry"/>
+<LabelGeometry Anchor="NW">
+<Point X="-77" Y="-5"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="607" Y="461"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S26" Target="S25">
+<LabelBlock>
+<SimpleIdentifier Name="softirq_exit"/>
+<LabelGeometry Anchor="NW">
+<Point X="-23" Y="-21"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="625" Y="435"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S26" Target="S26">
+<LabelBlock>
+<SimpleIdentifier Name="report_qs"/>
+<LabelGeometry Anchor="NW">
+<Point X="-5" Y="-10"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="600" Y="389"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S19" Target="S27">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_enter_2"/>
+</LabelBlock>
+<SplineGeometry>
+<Point X="579" Y="712"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S27" Target="S19">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_exit_2"/>
+<LabelGeometry Anchor="NW">
+<Point X="-69" Y="29"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="556" Y="707"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S27" Target="S28">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_enter_3"/>
+</LabelBlock>
+<SplineGeometry>
+<Point X="582" Y="888"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S28" Target="S27">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_exit_3"/>
+<LabelGeometry Anchor="NW">
+<Point X="-76" Y="10"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="538" Y="888"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S27" Target="S29">
+<LabelBlock>
+<SimpleIdentifier Name="softirq_entry"/>
+<LabelGeometry Anchor="NW">
+<Point X="-52" Y="10"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="528" Y="848"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S29" Target="S27">
+<LabelBlock>
+<SimpleIdentifier Name="softirq_exit"/>
+<LabelGeometry Anchor="NW">
+<Point X="-53" Y="-25"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="528" Y="816"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S29" Target="S29">
+<LabelBlock>
+<SimpleIdentifier Name="report_qs"/>
+<LabelGeometry Anchor="NW">
+<Point X="-33" Y="-40"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="453" Y="815"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S29" Target="S30">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_enter_3"/>
+</LabelBlock>
+<SplineGeometry>
+<Point X="481" Y="861"/>
+</SplineGeometry>
+</Edge>
+<Edge Source="S30" Target="S29">
+<LabelBlock>
+<SimpleIdentifier Name="nesting_exit_3"/>
+<LabelGeometry Anchor="NW">
+<Point X="-64" Y="-6"/>
+</LabelGeometry>
+</LabelBlock>
+<SplineGeometry>
+<Point X="463" Y="835"/>
 </SplineGeometry>
 </Edge>
 </EdgeList>
