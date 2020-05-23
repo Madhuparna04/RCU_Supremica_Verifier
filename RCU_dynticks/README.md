@@ -6,7 +6,7 @@ The dot file of the exported model from Supremica is: final.dot
 
 dot2c.py is the script to convert the dot file into C header file used in the module.
 
-How to run the Module:
+### How to run the Module:
 
 1. make
 
@@ -31,7 +31,7 @@ error("%s -> %s = %s %s\n",
 
 in automaton.h.
 
-Assumptions and details about the Module:
+### Assumptions and details about the Module:
 
 Based on v5.6-rc6 with Joel's patch series: https://lkml.org/lkml/2020/3/28/435
 
@@ -63,7 +63,7 @@ Event names and corresponding tracepoint
 
 13. softirq_exit - softirq_exit
 
-Cases not handled:
+### Cases not handled:
 
 1. IRQ in kernel mode is not handled here i.e., rcu_dyntick with context = IRQ and oldensting = 0 and newnesting = 2
 
